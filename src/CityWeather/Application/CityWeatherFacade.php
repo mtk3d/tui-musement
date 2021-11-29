@@ -2,7 +2,12 @@
 
 declare(strict_types=1);
 
-namespace TuiMusement\CityWeather;
+namespace TuiMusement\CityWeather\Application;
+
+use TuiMusement\CityWeather\Model\City;
+use TuiMusement\CityWeather\Model\CityRepository;
+use TuiMusement\CityWeather\Model\Weather;
+use TuiMusement\CityWeather\Model\WeatherRepository;
 
 class CityWeatherFacade
 {

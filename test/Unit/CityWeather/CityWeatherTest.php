@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace TuiMusement\CityWeather;
 
 use PHPUnit\Framework\TestCase;
+use TuiMusement\CityWeather\Application\CityWeatherFacade;
 
 class CityWeatherTest extends TestCase
 {

@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use TuiMusement\CityWeather\City;
-use TuiMusement\CityWeather\Coordinates;
+use TuiMusement\CityWeather\Model\City;
+use TuiMusement\CityWeather\Model\Coordinates;
 
 function aCity(string $name, float $lat, float $long): City
 {

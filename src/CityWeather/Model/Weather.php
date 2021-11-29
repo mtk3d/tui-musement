@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TuiMusement\CityWeather;
+namespace TuiMusement\CityWeather\Model;
 
 class Weather
 {
@@ -15,7 +15,7 @@ class Weather
     ) {
         $this->conditions = [
             'today' => $conditionToday,
-            'tomorrow' => $conditionTomorrow
+            'tomorrow' => $conditionTomorrow,
         ];
     }
 

@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace TuiMusement\CityWeather;
 
+use TuiMusement\CityWeather\Model\City;
+use TuiMusement\CityWeather\Model\CityRepository;
+
 class InMemoryCityRepository implements CityRepository
 {
     /** @var City[] */
