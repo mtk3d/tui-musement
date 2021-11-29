@@ -33,3 +33,13 @@ services:
 
   Psr\Http\Message\UriFactoryInterface:
     class: Symfony\Component\HttpClient\Psr18Client
+
+  TuiMusement\CityWeather\Infrastructure\MusementAPI:
+    class: TuiMusement\CityWeather\Infrastructure\Service\MusementAPIClient
+    arguments:
+      $musementApiUri: '%musement_api_url%'
+  TuiMusement\CityWeather\Infrastructure\WeatherAPI:
+    class: TuiMusement\CityWeather\Infrastructure\Service\WeatherAPIClient
+    arguments:
+      $weatherApiUrl: '%weather_api_url%'
+      $weatherApiKey: '%weather_api_key%'
