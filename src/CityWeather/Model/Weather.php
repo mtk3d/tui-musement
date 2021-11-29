@@ -14,13 +14,13 @@ class Weather
         string $conditionTomorrow
     ) {
         $this->conditions = [
-            'today' => $conditionToday,
-            'tomorrow' => $conditionTomorrow,
+            WeatherDay::TODAY()->getValue() => $conditionToday,
+            WeatherDay::TOMORROW()->getValue() => $conditionTomorrow,
         ];
     }
 
-    public function conditionOn(string $when = 'today'): string
+    public function conditionOn(WeatherDay $when): string
     {
-        return $this->conditions[$when];
+        return $this->conditions[$when->getValue()];
     }
 }

@@ -9,6 +9,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use TuiMusement\CityWeather\Model\City;
 use TuiMusement\CityWeather\Model\Weather;
+use TuiMusement\CityWeather\Model\WeatherDay;
 
 class CityWeatherListCommand extends Command
 {
@@ -37,8 +38,8 @@ class CityWeatherListCommand extends Command
             $output->writeln(sprintf(
                 'Processed city %s | %s - %s',
                 $city->name(),
-                $weather->conditionOn('today'),
-                $weather->conditionOn('tomorrow')
+                $weather->conditionOn(WeatherDay::TODAY()),
+                $weather->conditionOn(WeatherDay::TOMORROW())
             ));
         }
 
