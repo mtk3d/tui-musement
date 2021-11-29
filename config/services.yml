@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  TuiMusement\Application:
+    public: true
+    arguments:
+      $commands: !tagged console.command
+      $name: '%app_name%'
+      $version: '%app_version%'
