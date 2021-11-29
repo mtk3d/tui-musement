@@ -1,0 +1,5 @@
+services:
+  TuiMusement\CityWeather\Model\CityRepository:
+    class: TuiMusement\CityWeather\Infrastructure\Repository\InMemoryCityRepository
+  TuiMusement\CityWeather\Model\WeatherRepository:
+    class: TuiMusement\CityWeather\Infrastructure\Repository\InMemoryWeatherRepository

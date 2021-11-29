@@ -16,8 +16,3 @@ services:
       - { name: 'console.command', command: 'list:cities' }
 
   TuiMusement\CityWeather\Application\CityWeatherFacade: ~
-
-  TuiMusement\CityWeather\Model\CityRepository:
-    class: TuiMusement\CityWeather\Infrastructure\Repository\InMemoryCityRepository
-  TuiMusement\CityWeather\Model\WeatherRepository:
-    class: TuiMusement\CityWeather\Infrastructure\Repository\InMemoryWeatherRepository
