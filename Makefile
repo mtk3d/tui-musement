@@ -4,7 +4,7 @@ vendor: composer.json composer.lock
 
 beautify: ## Beautify the code
 beautify: vendor
-	vendor/bin/php-cs-fixer
+	vendor/bin/php-cs-fixer fix
 
 check: ## Run code linters
 check: vendor
