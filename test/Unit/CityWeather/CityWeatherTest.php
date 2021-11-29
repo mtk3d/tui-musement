@@ -6,6 +6,8 @@ namespace TuiMusement\CityWeather;
 
 use PHPUnit\Framework\TestCase;
 use TuiMusement\CityWeather\Application\CityWeatherFacade;
+use TuiMusement\CityWeather\Infrastructure\Repository\InMemoryCityRepository;
+use TuiMusement\CityWeather\Infrastructure\Repository\InMemoryWeatherRepository;
 
 class CityWeatherTest extends TestCase
 {

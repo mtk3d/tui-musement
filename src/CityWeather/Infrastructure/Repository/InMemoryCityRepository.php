@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TuiMusement\CityWeather;
+namespace TuiMusement\CityWeather\Infrastructure\Repository;
 
 use TuiMusement\CityWeather\Model\City;
 use TuiMusement\CityWeather\Model\CityRepository;
