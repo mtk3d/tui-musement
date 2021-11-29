@@ -21,3 +21,15 @@ services:
     class: TuiMusement\CityWeather\Infrastructure\Repository\HttpCityRepository
   TuiMusement\CityWeather\Model\WeatherRepository:
     class: TuiMusement\CityWeather\Infrastructure\Repository\HttpWeatherRepository
+
+  TuiMusement\CityWeather\Infrastructure\Repository\CityFactory: ~
+  TuiMusement\CityWeather\Infrastructure\Repository\WeatherFactory: ~
+
+  Psr\Http\Client\ClientInterface:
+    class: Symfony\Component\HttpClient\Psr18Client
+
+  Psr\Http\Message\RequestFactoryInterface:
+    class: Symfony\Component\HttpClient\Psr18Client
+
+  Psr\Http\Message\UriFactoryInterface:
+    class: Symfony\Component\HttpClient\Psr18Client

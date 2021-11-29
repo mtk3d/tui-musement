@@ -1,5 +1,5 @@
 services:
-  TuiMusement\CityWeather\Model\CityRepository:
-    class: TuiMusement\CityWeather\Infrastructure\Repository\InMemoryCityRepository
-  TuiMusement\CityWeather\Model\WeatherRepository:
-    class: TuiMusement\CityWeather\Infrastructure\Repository\InMemoryWeatherRepository
+  TuiMusement\CityWeather\Infrastructure\MusementAPI:
+    class: TuiMusement\Test\Stub\MusementAPIStub
+  TuiMusement\CityWeather\Infrastructure\WeatherAPI:
+    class: TuiMusement\Test\Stub\WeatherAPIStub

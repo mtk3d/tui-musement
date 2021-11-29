@@ -26,6 +26,6 @@ class ListCommandTest extends TestCase
         $commandTester->execute([]);
 
         $output = $commandTester->getDisplay();
-        $this->assertStringContainsString('Processed city Warsaw | Rainy - Sunny', $output);
+        $this->assertStringContainsString('Processed city Amsterdam | Heavy rain - Moderate rain', $output);
     }
 }
