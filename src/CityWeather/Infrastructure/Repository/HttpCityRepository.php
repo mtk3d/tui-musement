@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace TuiMusement\CityWeather\Infrastructure\Repository;
 
 use TuiMusement\CityWeather\Infrastructure\MusementAPI;
+use TuiMusement\CityWeather\Infrastructure\Service\APICallException;
+use TuiMusement\CityWeather\Model\City;
 use TuiMusement\CityWeather\Model\CityRepository;
+use TuiMusement\CityWeather\Model\RepositoryException;
 
 class HttpCityRepository implements CityRepository
 {
@@ -15,9 +18,19 @@ class HttpCityRepository implements CityRepository
     ) {
     }
 
+    /**
+     * @return City[]
+     *
+     * @throws RepositoryException
+     */
     public function all(): array
     {
-        $citiesResponse = $this->musementAPI->fetchAllCities();
+        try {
+            $citiesResponse = $this->musementAPI->fetchAllCities();
+        } catch (APICallException $e) {
+            throw new RepositoryException($e->getMessage());
+        }
+
         /** @var array<array{name: string, latitude: float, longitude: float}> $cities */
         $cities = json_decode((string) $citiesResponse->getBody(), true);
 

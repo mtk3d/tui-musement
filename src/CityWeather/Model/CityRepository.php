@@ -8,6 +8,8 @@ interface CityRepository
 {
     /**
      * @return City[]
+     *
+     * @throws RepositoryException
      */
     public function all(): array;
 }

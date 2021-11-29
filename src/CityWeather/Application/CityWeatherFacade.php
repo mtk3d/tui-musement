@@ -6,6 +6,7 @@ namespace TuiMusement\CityWeather\Application;
 
 use TuiMusement\CityWeather\Model\City;
 use TuiMusement\CityWeather\Model\CityRepository;
+use TuiMusement\CityWeather\Model\RepositoryException;
 use TuiMusement\CityWeather\Model\Weather;
 use TuiMusement\CityWeather\Model\WeatherRepository;
 
@@ -19,6 +20,8 @@ class CityWeatherFacade
 
     /**
      * @return iterable<array{ city: City, weather: Weather }>
+     *
+     * @throws RepositoryException
      */
     public function all(): iterable
     {

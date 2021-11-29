@@ -10,7 +10,11 @@ use TuiMusement\CityWeather\Model\Coordinates;
 class CityFactory
 {
     /**
-     * @param array{name: string, latitude: float, longitude: float} $data
+     * @param array{
+     *     name: string,
+     *     latitude: float,
+     *     longitude: float
+     * } $data
      */
     public function fromArrayResponse(array $data): City
     {
