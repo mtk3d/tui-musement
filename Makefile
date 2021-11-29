@@ -1,3 +1,9 @@
+install: ## Install dependencies and copy config file
+install: config/parameters.yml vendor
+
+config/parameters.yml:
+	cp config/parameters.yml.dist config/parameters.yml
+
 vendor: composer.json composer.lock
 	composer validate --no-check-publish
 	composer install --ignore-platform-reqs --prefer-dist
@@ -21,4 +27,4 @@ help:
 	awk 'BEGIN {FS = ":"}; {printf "  \033[33m%-10s\033[0m%s\n", $$1, $$2}'
 
 .DEFAULT_GOAL = help
-.PHONY: help
+.PHONY: help beautify check test install
