@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TuiMusement\CityWeather\Infrastructure\Service;
 
-use Exception;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -24,6 +23,9 @@ class WeatherAPIClient implements WeatherAPI
     ) {
     }
 
+    /**
+     * @throws APICallException
+     */
     public function fetchWeatherFor(Coordinates $coordinates): ResponseInterface
     {
         $uri = $this->uriFactory
@@ -41,12 +43,12 @@ class WeatherAPIClient implements WeatherAPI
         try {
             $response = $this->client->sendRequest($request);
             if (200 !== $response->getStatusCode()) {
-                throw new Exception(sprintf('Sorry, the WeatherApi respond with %s HTTP code', $response->getStatusCode()));
+                throw new APICallException(sprintf('Sorry, the WeatherApi respond with %s HTTP code', $response->getStatusCode()));
             }
 
             return $response;
         } catch (ClientExceptionInterface $e) {
-            throw new Exception("Sorry, the WeatherApi doesn't respond");
+            throw new APICallException("Sorry, the WeatherApi doesn't respond");
         }
     }
 }
