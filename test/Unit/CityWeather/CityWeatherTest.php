@@ -34,7 +34,7 @@ class CityWeatherTest extends TestCase
         $this->weatherRepository->push($warsawCity->coordinates(), $warsawWeather);
         $this->weatherRepository->push($milanCity->coordinates(), $milanWeather);
         // when
-        $cityWeather = $this->cityWeatherFacade->all();
+        $cityWeather = iterator_to_array($this->cityWeatherFacade->all());
         // then
         self::assertContains(['city' => $warsawCity, 'weather' => $warsawWeather], $cityWeather);
         self::assertContains(['city' => $milanCity, 'weather' => $milanWeather], $cityWeather);

@@ -18,15 +18,17 @@ class CityWeatherFacade
     }
 
     /**
-     * @return array{ city: City, weather: Weather }[]
+     * @return iterable<array{ city: City, weather: Weather }>
      */
-    public function all(): array
+    public function all(): iterable
     {
         $cities = $this->cityRepository->all();
 
-        return array_map(fn (City $city) => [
-            'city' => $city,
-            'weather' => $this->weatherRepository->findIn($city->coordinates()),
-        ], $cities);
+        foreach ($cities as $city) {
+            yield [
+                'city' => $city,
+                'weather' => $this->weatherRepository->findIn($city->coordinates()),
+            ];
+        }
     }
 }
