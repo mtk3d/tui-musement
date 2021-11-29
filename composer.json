@@ -16,7 +16,10 @@
     "autoload": {
         "psr-4": {
             "TuiMusement\\": "src/"
-        }
+        },
+        "files": [
+            "test/Fixture/Fixtures.php"
+        ]
     },
     "authors": [
         {
