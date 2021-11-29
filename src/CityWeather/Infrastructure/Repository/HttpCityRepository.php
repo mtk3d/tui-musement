@@ -18,6 +18,7 @@ class HttpCityRepository implements CityRepository
     public function all(): array
     {
         $citiesResponse = $this->musementAPI->fetchAllCities();
+        /** @var array<array{name: string, latitude: float, longitude: float}> $cities */
         $cities = json_decode((string) $citiesResponse->getBody(), true);
 
         return array_map([$this->cityFactory, 'fromArrayResponse'], $cities);

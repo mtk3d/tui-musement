@@ -20,6 +20,7 @@ class HttpWeatherRepository implements WeatherRepository
     public function findIn(Coordinates $coordinates): Weather
     {
         $weatherResponse = $this->weatherAPI->fetchWeatherFor($coordinates);
+        /** @var array{forecast: array{forecastday: array<array{day: array{condition: array{text: string}}}>}} $weather */
         $weather = json_decode((string) $weatherResponse->getBody(), true);
 
         return $this->weatherFactory->fromArrayResponse($weather);
