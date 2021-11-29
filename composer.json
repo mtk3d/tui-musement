@@ -1,0 +1,27 @@
+{
+    "name": "mateuszcholewka/tui-musement",
+    "description": "TUI Musement | Backend tech homework",
+    "type": "project",
+    "require": {
+        "symfony/console": "^5.3",
+        "symfony/dependency-injection": "^5.3",
+        "symfony/config": "^5.3",
+        "symfony/http-client": "^5.3"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.2",
+        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "TuiMusement\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mateusz Cholewka",
+            "email": "mateusz@cholewka.com.pl"
+        }
+    ]
+}
