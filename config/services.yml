@@ -10,3 +10,7 @@ services:
       $commands: !tagged console.command
       $name: '%app_name%'
       $version: '%app_version%'
+
+  TuiMusement\CityWeather\Application\CityWeatherListCommand:
+    tags:
+      - { name: 'console.command', command: 'list:cities' }
