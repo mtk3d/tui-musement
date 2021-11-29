@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace TuiMusement;
 
 use Symfony\Component\Config\FileLocator;
-use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
@@ -25,15 +24,15 @@ class Kernel
         $this->container->compile();
     }
 
-    public function container(): Container
+    public static function test(): Kernel
     {
-        return $this->container;
+        return new Kernel('test');
     }
 
     public function app(): Application
     {
         /** @var Application $app */
-        $app = $this->container()->get(Application::class);
+        $app = $this->container->get(Application::class);
 
         return $app;
     }
