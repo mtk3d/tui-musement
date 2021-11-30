@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace TuiMusement\CityWeather\Application;
+namespace TuiMusement\Application\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use TuiMusement\CityWeather\Model\City;
-use TuiMusement\CityWeather\Model\CityWeatherFacade;
+use TuiMusement\CityWeather\Application\CityWeatherFacade;
 use TuiMusement\CityWeather\Model\RepositoryException;
 use TuiMusement\CityWeather\Model\Weather;
 use TuiMusement\CityWeather\Model\WeatherDay;

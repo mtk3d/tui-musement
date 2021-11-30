@@ -11,11 +11,11 @@ services:
       $name: '%app_name%'
       $version: '%app_version%'
 
-  TuiMusement\CityWeather\Application\CityWeatherListCommand:
+  TuiMusement\Application\Command\CityWeatherListCommand:
     tags:
       - { name: 'console.command', command: 'list:cities' }
 
-  TuiMusement\CityWeather\Model\CityWeatherFacade: ~
+  TuiMusement\CityWeather\Application\CityWeatherFacade: ~
 
   TuiMusement\CityWeather\Model\CityRepository:
     class: TuiMusement\CityWeather\Infrastructure\Repository\HttpCityRepository

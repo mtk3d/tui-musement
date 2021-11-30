@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TuiMusement\Test\CityWeather\Unit;
 
 use PHPUnit\Framework\TestCase;
-use TuiMusement\CityWeather\Model\CityWeatherFacade;
+use TuiMusement\CityWeather\Application\CityWeatherFacade;
 use TuiMusement\Test\CityWeather\Repository\InMemoryCityRepository;
 use TuiMusement\Test\CityWeather\Repository\InMemoryWeatherRepository;
 
