@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace TuiMusement\CityWeather;
+namespace TuiMusement\Test\CityWeather\Unit;
 
 use PHPUnit\Framework\TestCase;
-use TuiMusement\CityWeather\Infrastructure\Repository\InMemoryCityRepository;
-use TuiMusement\CityWeather\Infrastructure\Repository\InMemoryWeatherRepository;
 use TuiMusement\CityWeather\Model\CityWeatherFacade;
+use TuiMusement\Test\CityWeather\Repository\InMemoryCityRepository;
+use TuiMusement\Test\CityWeather\Repository\InMemoryWeatherRepository;
 
 class CityWeatherTest extends TestCase
 {

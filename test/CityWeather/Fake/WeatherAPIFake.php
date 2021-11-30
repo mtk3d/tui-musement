@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TuiMusement\Test\Fake;
+namespace TuiMusement\Test\CityWeather\Fake;
 
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\ResponseInterface;

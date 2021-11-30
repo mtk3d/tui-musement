@@ -23,10 +23,10 @@
     "autoload": {
         "psr-4": {
             "TuiMusement\\": "src/",
-            "TuiMusement\\Test\\Fake\\": "test/Fake"
+            "TuiMusement\\Test\\": "test/"
         },
         "files": [
-            "test/Fixture/Fixtures.php"
+            "test/CityWeather/Fixture/Fixtures.php"
         ]
     },
     "authors": [

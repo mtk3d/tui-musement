@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TuiMusement\CityWeather;
+namespace TuiMusement\Test\CityWeather\Unit;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Tester\CommandTester;

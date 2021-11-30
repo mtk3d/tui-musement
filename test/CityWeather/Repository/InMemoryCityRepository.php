@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TuiMusement\CityWeather\Infrastructure\Repository;
+namespace TuiMusement\Test\CityWeather\Repository;
 
 use TuiMusement\CityWeather\Model\City;
 use TuiMusement\CityWeather\Model\CityRepository;
@@ -11,11 +11,6 @@ class InMemoryCityRepository implements CityRepository
 {
     /** @var City[] */
     private array $cities = [];
-
-    public function __construct()
-    {
-        $this->cities[] = aCity('Warsaw', 10, 10);
-    }
 
     /**
      * @return City[]

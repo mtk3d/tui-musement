@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TuiMusement\CityWeather\Infrastructure\Repository;
+namespace TuiMusement\Test\CityWeather\Repository;
 
 use TuiMusement\CityWeather\Model\Coordinates;
 use TuiMusement\CityWeather\Model\Weather;
@@ -12,11 +12,6 @@ class InMemoryWeatherRepository implements WeatherRepository
 {
     /** @var Weather[] */
     private array $weather = [];
-
-    public function __construct()
-    {
-        $this->weather['10,10'] = aWeather('Rainy', 'Sunny');
-    }
 
     public function findIn(Coordinates $coordinates): Weather
     {
