@@ -30,4 +30,4 @@ help:
 	awk 'BEGIN {FS = ":"}; {printf "  \033[33m%-10s\033[0m%s\n", $$1, $$2}'
 
 .DEFAULT_GOAL = help
-.PHONY: help beautify check test install
+.PHONY: help beautify check test install build
