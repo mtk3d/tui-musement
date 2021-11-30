@@ -1,0 +1,6 @@
+parameters:
+  app_name: 'TuiMusementCli'
+  app_version: 'v0.0.1'
+  musement_api_url: 'https://api.musement.com'
+  weather_api_url: 'https://api.weatherapi.com'
+  weather_api_key: '%env(WEATHER_API_KEY)%'

@@ -1,6 +1,9 @@
 install: ## Install dependencies and copy config file
 install: config/parameters.yml vendor
 
+build: ## Build docker image with command
+	docker build . -f ./docker/Dockerfile -t musement-cli
+
 config/parameters.yml:
 	cp config/parameters.yml.dist config/parameters.yml
 

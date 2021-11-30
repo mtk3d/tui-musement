@@ -34,6 +34,10 @@ class MusementApiClient implements MusementAPI
 
         try {
             $response = $this->client->sendRequest($request);
+            if (401 === $response->getStatusCode()) {
+                throw new APICallException('MusementAPI authorization problem. Check if the weather api key is valid.');
+            }
+
             if (200 !== $response->getStatusCode()) {
                 throw new APICallException(sprintf('Sorry, the MusementAPI respond with %s HTTP code', $response->getStatusCode()));
             }
