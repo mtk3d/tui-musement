@@ -57,5 +57,5 @@ docker run -it --rm -e WEATHER_API_KEY=[your weather api key] musement-cli
 
 Application is split to three layers `model`, `application`, `infrastructure`.
 - `Model` contains all resources and interfaces, for handle basic application business requirements. It cannot depend on any other layers.
-- `Application` contains everything that is responsible for handling user interface. This layer depends on model layer. In this case it's the single command.
+- `Application` contains interface for application output. This layer depends on model layer.
 - `Infrastructure` is the layer with infrastructural dependencies. In this case there are the APIClients implemented there and the repositories which are base on the APIClients.

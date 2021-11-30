@@ -24,6 +24,7 @@
     "autoload": {
         "psr-4": {
             "TuiMusement\\": "src/",
+            "TuiMusement\\App\\": "app/",
             "TuiMusement\\Test\\": "test/"
         },
         "files": [

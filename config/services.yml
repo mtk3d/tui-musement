@@ -11,7 +11,7 @@ services:
       $name: '%app_name%'
       $version: '%app_version%'
 
-  TuiMusement\Application\Command\CityWeatherListCommand:
+  TuiMusement\App\Command\CityWeatherListCommand:
     tags:
       - { name: 'console.command', command: 'list:cities' }
 
