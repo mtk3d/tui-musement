@@ -8,6 +8,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use TuiMusement\CityWeather\Model\City;
+use TuiMusement\CityWeather\Model\CityWeatherFacade;
 use TuiMusement\CityWeather\Model\RepositoryException;
 use TuiMusement\CityWeather\Model\Weather;
 use TuiMusement\CityWeather\Model\WeatherDay;

@@ -15,7 +15,7 @@ services:
     tags:
       - { name: 'console.command', command: 'list:cities' }
 
-  TuiMusement\CityWeather\Application\CityWeatherFacade: ~
+  TuiMusement\CityWeather\Model\CityWeatherFacade: ~
 
   TuiMusement\CityWeather\Model\CityRepository:
     class: TuiMusement\CityWeather\Infrastructure\Repository\HttpCityRepository
