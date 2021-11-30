@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace TuiMusement\Test\Stub;
+namespace TuiMusement\Test\Fake;
 
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\ResponseInterface;
 use TuiMusement\CityWeather\Infrastructure\MusementAPI;
 
-class MusementAPIStub implements MusementAPI
+class MusementAPIFake implements MusementAPI
 {
     private Psr17Factory $factory;
 

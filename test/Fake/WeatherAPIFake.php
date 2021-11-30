@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace TuiMusement\Test\Stub;
+namespace TuiMusement\Test\Fake;
 
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\ResponseInterface;
 use TuiMusement\CityWeather\Infrastructure\WeatherAPI;
 use TuiMusement\CityWeather\Model\Coordinates;
 
-class WeatherAPIStub implements WeatherAPI
+class WeatherAPIFake implements WeatherAPI
 {
     private Psr17Factory $factory;
 

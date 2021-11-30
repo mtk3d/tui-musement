@@ -1,5 +1,5 @@
 services:
   TuiMusement\CityWeather\Infrastructure\MusementAPI:
-    class: TuiMusement\Test\Stub\MusementAPIStub
+    class: TuiMusement\Test\Fake\MusementAPIFake
   TuiMusement\CityWeather\Infrastructure\WeatherAPI:
-    class: TuiMusement\Test\Stub\WeatherAPIStub
+    class: TuiMusement\Test\Fake\WeatherAPIFake

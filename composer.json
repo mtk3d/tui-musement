@@ -23,7 +23,7 @@
     "autoload": {
         "psr-4": {
             "TuiMusement\\": "src/",
-            "TuiMusement\\Test\\Stub\\": "test/Stub"
+            "TuiMusement\\Test\\Fake\\": "test/Fake"
         },
         "files": [
             "test/Fixture/Fixtures.php"
