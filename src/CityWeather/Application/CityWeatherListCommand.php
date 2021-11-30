@@ -31,23 +31,23 @@ class CityWeatherListCommand extends Command
     {
         try {
             $cityWeather = $this->cityWeatherFacade->all();
+
+            /**
+             * @var City    $city
+             * @var Weather $weather
+             */
+            foreach ($cityWeather as [ 'city' => $city, 'weather' => $weather ]) {
+                $output->writeln(sprintf(
+                    'Processed city %s | %s - %s',
+                    $city->name(),
+                    $weather->conditionOn(WeatherDay::TODAY()),
+                    $weather->conditionOn(WeatherDay::TOMORROW())
+                ));
+            }
         } catch (RepositoryException $e) {
             $output->writeln($e->getMessage());
 
             return Command::FAILURE;
-        }
-
-        /**
-         * @var City    $city
-         * @var Weather $weather
-         */
-        foreach ($cityWeather as [ 'city' => $city, 'weather' => $weather ]) {
-            $output->writeln(sprintf(
-                'Processed city %s | %s - %s',
-                $city->name(),
-                $weather->conditionOn(WeatherDay::TODAY()),
-                $weather->conditionOn(WeatherDay::TOMORROW())
-            ));
         }
 
         return Command::SUCCESS;

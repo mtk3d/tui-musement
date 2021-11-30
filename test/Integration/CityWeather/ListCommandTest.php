@@ -15,8 +15,7 @@ class ListCommandTest extends TestCase
 
     public function setUp(): void
     {
-        $kernel = Kernel::test();
-        $this->application = $kernel->app();
+        $this->application = Kernel::test()->app();
     }
 
     public function testRunningCommand(): void

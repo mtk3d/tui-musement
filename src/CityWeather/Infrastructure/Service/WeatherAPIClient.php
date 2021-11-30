@@ -47,7 +47,7 @@ class WeatherAPIClient implements WeatherAPI
             }
 
             return $response;
-        } catch (ClientExceptionInterface $e) {
+        } catch (ClientExceptionInterface) {
             throw new APICallException("Sorry, the WeatherApi doesn't respond");
         }
     }

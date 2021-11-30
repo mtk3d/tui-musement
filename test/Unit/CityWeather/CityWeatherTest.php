@@ -26,9 +26,9 @@ class CityWeatherTest extends TestCase
     {
         // given
         $warsawCity = aCity('Warsaw', 52.237049, 21.017532);
+        $milanWeather = aWeather('Light Rain', 'Sunny');
         $milanCity = aCity('Milan', 45.464664, 9.188540);
         $warsawWeather = aWeather('Sunny', 'Heavy Rain');
-        $milanWeather = aWeather('Light Rain', 'Sunny');
         $this->cityRepository->push($warsawCity);
         $this->cityRepository->push($milanCity);
         $this->weatherRepository->push($warsawCity->coordinates(), $warsawWeather);
