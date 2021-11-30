@@ -1,5 +1,7 @@
 # TUI Musement CLI
 
+Author: **Mateusz Cholewka** from **Boldare**
+
 ```shell
 TuiMusementCli v0.0.1
 
