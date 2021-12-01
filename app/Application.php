@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TuiMusement;
+namespace TuiMusement\App;
 
 use Symfony\Component\Console\Application as BaseApplication;
 use Symfony\Component\Console\Command\Command;

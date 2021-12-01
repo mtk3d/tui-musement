@@ -3,7 +3,7 @@
 
 declare(strict_types=1);
 
-use TuiMusement\Kernel;
+use TuiMusement\App\Kernel;
 
 require __DIR__ . '/../vendor/autoload.php';
 

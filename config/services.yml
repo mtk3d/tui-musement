@@ -4,7 +4,7 @@ services:
     autoconfigure: true
     public: false
 
-  TuiMusement\Application:
+  TuiMusement\App\Application:
     public: true
     arguments:
       $commands: !tagged console.command

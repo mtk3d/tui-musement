@@ -6,8 +6,8 @@ namespace TuiMusement\Test\CityWeather\Unit;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Tester\CommandTester;
-use TuiMusement\Application;
-use TuiMusement\Kernel;
+use TuiMusement\App\Application;
+use TuiMusement\App\Kernel;
 
 class ListCommandTest extends TestCase
 {
