@@ -31,7 +31,7 @@ class HttpCityRepository implements CityRepository
             throw new RepositoryException($e->getMessage());
         }
 
-        /** @var array<array{name: string, latitude: float, longitude: float}> $cities */
+        /** @var array<array{ name: string, latitude: float, longitude: float }> $cities */
         $cities = json_decode((string) $citiesResponse->getBody(), true);
 
         return array_map([$this->cityFactory, 'fromArrayResponse'], $cities);

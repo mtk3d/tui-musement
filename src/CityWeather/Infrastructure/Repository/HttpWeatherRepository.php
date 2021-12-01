@@ -30,7 +30,7 @@ class HttpWeatherRepository implements WeatherRepository
             throw new RepositoryException($e->getMessage());
         }
 
-        /** @var array{forecast: array{forecastday: array<array{day: array{condition: array{text: string}}}>}} $weather */
+        /** @var array{ forecast: array{ forecastday: array<array{ day: array{ condition: array{ text: string } } }> } } $weather */
         $weather = json_decode((string) $weatherResponse->getBody(), true);
 
         return $this->weatherFactory->fromArrayResponse($weather);
