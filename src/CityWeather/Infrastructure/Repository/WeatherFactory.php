@@ -9,7 +9,17 @@ use TuiMusement\CityWeather\Model\Weather;
 class WeatherFactory
 {
     /**
-     * @param array{forecast: array{forecastday: array<array{day: array{condition: array{text: string}}}>}} $data
+     * @param array{
+     *     forecast: array{
+     *         forecastday: array<array{
+     *             day: array{
+     *                 condition: array{
+     *                     text: string
+     *                 }
+     *             }
+     *         }>
+     *     }
+     * } $data
      */
     public function fromArrayResponse(array $data): Weather
     {
