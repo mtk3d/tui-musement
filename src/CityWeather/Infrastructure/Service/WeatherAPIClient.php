@@ -42,8 +42,17 @@ class WeatherAPIClient implements WeatherAPI
 
         try {
             $response = $this->client->sendRequest($request);
-            if (200 !== $response->getStatusCode()) {
-                throw new APICallException(sprintf('Sorry, the WeatherApi respond with %s HTTP code', $response->getStatusCode()));
+            $statusCode = $response->getStatusCode();
+
+            if (401 === $statusCode) {
+                throw new APICallException('WeatherAPI authorization problem. Check if the weather api key is valid.');
+            }
+
+            if (200 !== $statusCode) {
+                /** @var array{ error: ?array{ message: ?string, code: ?string }} $responseBody */
+                $responseBody = json_decode((string) $response->getBody(), true);
+                $message = $responseBody['error']['message'] ?? '';
+                throw APICallException::errorMessage('WeatherAPI', (string) $statusCode, $message);
             }
 
             return $response;
