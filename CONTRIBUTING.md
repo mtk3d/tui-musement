@@ -15,7 +15,7 @@ to run the project. No more commands should be required.
 Every new target that can be executed as a command, should contain the comment started with `##`.
 All those comments are parsed by the help command.
 
-The targets that are commands, should be as shor and as descriptive as possible. The best would be one-word commands.
+The targets that are commands, should be as short and as descriptive as possible. The best would be one-word commands.
 
 ## Unit Tests
 
