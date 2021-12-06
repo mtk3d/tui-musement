@@ -63,9 +63,14 @@ docker run -it --rm -e WEATHER_API_KEY=[your weather api key] musement-cli
 
 ## :building_construction: Architecture
 
-Application core placed in `src` directory is split to three layers `model`, `application`, `infrastructure`.
+The CityWeather module placed in `src` directory is split to three layers `model`, `application`, `infrastructure`.
 - `Model` contains all resources and interfaces, for handle basic application business requirements. It cannot depend on any other layers.
 - `Application` contains interface for application output. This layer depends on model layer.
 - `Infrastructure` is the layer with infrastructural dependencies. In this case there are the APIClients implemented and the repositories which are based on the APIClients.
 
 Code responsible for CLI interface code is placed in `app` directory. This code is joining the application core code with user interface code that depends on framework.
+
+This architecture enables us to clearly decouple model layer from external services layer, and to reuse the model when for example we need to use the database as a data source. To do that, we need just to implement another repositories based on the same interfaces.
+The API Clients replacement is also possible. If we want to use for example an official SDK, we can just create an adapter that implements existing API Client interfaces.
+
+Splitting code to the modules part and the application part gives us a possibility to reuse the same modules with other user interfaces like for example the REST API, or even to use it with another framework configuration.
