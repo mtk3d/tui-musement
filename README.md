@@ -73,4 +73,4 @@ Code responsible for CLI interface code is placed in `app` directory. This code 
 This architecture enables us to clearly decouple model layer from external services layer, and to reuse the model when for example we need to use the database as a data source. To do that, we need just to implement another repositories based on the same interfaces.
 The API Clients replacement is also possible. If we want to use for example an official SDK, we can just create an adapter that implements existing API Client interfaces.
 
-Splitting code to the modules part and the application part gives us a possibility to reuse the same modules with other user interfaces like for example the REST API, or even to use it with another framework configuration.
+Splitting code to the modules part and the application part gives us a possibility to easily reuse the same modules with other user interfaces like for example the REST API, or even to use it with another framework configuration.
